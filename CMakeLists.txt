@@ -7,4 +7,6 @@ add_executable(poo2 main.cpp
         User.h
         User.cpp
         Exercise.h
-        Exercise.cpp)
+        Exercise.cpp
+        CalisthenicsExercise.h
+        CalisthenicsExercise.cpp)
