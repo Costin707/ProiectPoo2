@@ -5,4 +5,6 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(poo2 main.cpp
         User.h
-        User.cpp)
+        User.cpp
+        Exercise.h
+        Exercise.cpp)

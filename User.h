@@ -1,13 +1,13 @@
 #ifndef USER_H
 #define USER_H
-#include <string>
 #include <iostream>
-using namespace std;
+#include <string>
+#include <stdexcept>
 
 class User {
     const int id;
-    string name;
     static long noUsers;
+    std::string name;
     float height;
     float weight;
     char gender;
@@ -15,24 +15,24 @@ class User {
 
 public:
     User();
-    User(string name, float height, float weight, char gender);
+    User(std::string name, float height, float weight, char gender);
     User(const User& obj);
     User& operator=(const User& obj);
     ~User();
 
     int getId() const;
-    string getName() const;
+    std::string getName() const;
     float getHeight() const;
     float getWeight() const;
     char getGender() const;
     double getBMI() const;
-    string getBMICategory() const;
+    std::string getBMICategory() const;
 
     void setHeight(float height);
     void setWeight(float weight);
 
-    friend ostream& operator<<(ostream& out, const User& obj);
-    friend istream& operator>>(istream& in, User& obj);
+    friend std::ostream& operator<<(std::ostream& out, const User& obj);
+    friend std::istream& operator>>(std::istream& in, User& obj);
 
 private:
     void calculateBMI();
