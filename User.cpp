@@ -19,6 +19,24 @@ User::User(std::string name, float height, float weight, char gender):id(++noUse
     calculateBMI();
 }
 
+void User::addWorkout(const Workout& workout) {
+    workouts.push_back(workout);
+}
+
+void User::removeWorkout(int id) {
+    for (int i = 0; i < workouts.size(); i++) {
+        if (workouts[i].getId() == id) {
+            workouts.erase(workouts.begin() + i);
+            return;
+        }
+    }
+    throw std::runtime_error("Workout not found!");
+}
+
+std::vector<Workout>& User::getWorkouts() {
+    return workouts;
+}
+
 void User::calculateBMI() {
     if (height > 0 && weight > 0  )
         BMI = weight / (height * height);
@@ -95,7 +113,7 @@ User& User::operator=(const User& obj) {
 std::istream& operator>>(std::istream& in, User& obj) {
     std::cout << "Your name: ";
     in >> obj.name;
-    std::cout << "Your height (meters): ";
+    std::cout << "Your height (cm): ";
     in >> obj.height;
     std::cout << "Your weight (kg): ";
     in >> obj.weight;

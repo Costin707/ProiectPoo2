@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 #include <stdexcept>
-
+#include "Workout.h"
 class User {
     const int id;
     static long noUsers;
@@ -12,7 +12,7 @@ class User {
     float weight;
     char gender;
     double BMI;
-
+    std::vector<Workout> workouts;
 public:
     User();
     User(std::string name, float height, float weight, char gender);
@@ -30,6 +30,9 @@ public:
 
     void setHeight(float height);
     void setWeight(float weight);
+    void addWorkout(const Workout& workout);
+    void removeWorkout(int id);
+    std::vector<Workout>& getWorkouts();
 
     friend std::ostream& operator<<(std::ostream& out, const User& obj);
     friend std::istream& operator>>(std::istream& in, User& obj);

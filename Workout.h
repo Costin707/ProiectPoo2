@@ -21,6 +21,7 @@ public:
     int getId() const;
     std::string getName() const;
     void setName(const std::string& name);
+    std::vector<Exercise*>& getExercises();
 
     void addExercise(Exercise* exercise);
     void removeExercise(int id);

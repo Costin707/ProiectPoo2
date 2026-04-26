@@ -34,9 +34,15 @@ Workout::~Workout() {
     }
     exercises.clear();
 }
-
-int Workout::getId() const { return id; }
-std::string Workout::getName() const { return name; }
+std::vector<Exercise*>& Workout::getExercises() {
+    return exercises;
+}
+int Workout::getId() const {
+    return id;
+}
+std::string Workout::getName() const {
+    return name;
+}
 
 void Workout::setName(const std::string& name) {
     if (name.empty())

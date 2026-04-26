@@ -13,4 +13,6 @@ add_executable(poo2 main.cpp
         WeightExercise.h
         WeightExercise.cpp
         Workout.h
-        Workout.cpp)
+        Workout.cpp
+        Menu.h
+        Menu.cpp)
