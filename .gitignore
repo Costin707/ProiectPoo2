@@ -1,0 +1,28 @@
+ Build directories
+cmake-build-debug/
+cmake-build-release/
+cmake-build-*/
+build/
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+
+# Ninja build files
+build.ninja
+.ninja_deps
+.ninja_log
+
+# Compiled binaries
+*.exe
+*.out
+*.o
+*.obj
+
+# CLion IDE files
+.idea/
+
+# Windows thumbnail cache
+Thumbs.db
