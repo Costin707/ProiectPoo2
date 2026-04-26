@@ -9,8 +9,7 @@ class CalisthenicsExercise : public Exercise {
 
 public:
     CalisthenicsExercise();
-    CalisthenicsExercise(std::string name, std::string muscleGroup, int reps, float weight,
-                         std::string difficulty, bool requiresEquipment, float userWeight);
+    CalisthenicsExercise(std::string name, std::string muscleGroup, int reps, float weight,std::string difficulty, bool requiresEquipment, float userWeight);
     CalisthenicsExercise(const CalisthenicsExercise& obj);
     CalisthenicsExercise& operator=(const CalisthenicsExercise& obj);
     ~CalisthenicsExercise();
